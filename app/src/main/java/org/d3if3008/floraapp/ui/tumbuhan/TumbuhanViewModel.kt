@@ -12,6 +12,7 @@ import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.d3if3008.floraapp.model.Tumbuhan
+import org.d3if3008.floraapp.network.ApiStatus
 import org.d3if3008.floraapp.network.TumbuhanApi
 import org.d3if3008.floraapp.network.UpdateWorker
 import java.lang.Exception
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit
 
 class TumbuhanViewModel: ViewModel() {
     private val data = MutableLiveData<List<Tumbuhan>>()
-    private val status = MutableLiveData<TumbuhanApi.ApiStatus>()
+    private val status = MutableLiveData<ApiStatus>()
 
     init {
         retrieveData()
@@ -27,18 +28,19 @@ class TumbuhanViewModel: ViewModel() {
 
     private fun retrieveData() {
         viewModelScope.launch ( Dispatchers.IO ) {
-            status.postValue(TumbuhanApi.ApiStatus.LOADING)
+            status.postValue(ApiStatus.LOADING)
             try {
                 data.postValue(TumbuhanApi.service.getTumbuhan())
-                status.postValue(TumbuhanApi.ApiStatus.SUCCES)
+                status.postValue(ApiStatus.SUCCES)
             } catch (e: Exception) {
                 Log.d("TumbuhanViewModel","Failure: ${e.message}")
+                status.postValue(ApiStatus.FAILED)
             }
         }
     }
 
     fun getData(): LiveData<List<Tumbuhan>> = data
-    fun getStatus(): LiveData<TumbuhanApi.ApiStatus> = status
+    fun getStatus(): LiveData<ApiStatus> = status
 
     fun scheduleUpdater(app: Application) {
         val request = OneTimeWorkRequestBuilder<UpdateWorker>()

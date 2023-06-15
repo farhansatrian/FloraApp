@@ -31,8 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.myNavHostFragment)
 
-
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = getString(R.string.channel_name)
             val importance = NotificationManager.IMPORTANCE_DEFAULT
