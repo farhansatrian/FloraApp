@@ -1,0 +1,27 @@
+[
+  {
+    "nama": "Mawar",
+    "nama_latin": "Rosa",
+    "imageid": "mawar"
+  },
+  {
+    "nama": "Anggrek",
+    "nama_latin": "Orchidaceae",
+    "imageid": "anggrek"
+  },
+  {
+    "nama": "Teratai",
+    "nama_latin": "Nelumbo",
+    "imageid": "teratai"
+  },
+  {
+    "nama": "Matahari",
+    "nama_latin": "Helianthus",
+    "imageid": "matahari"
+  },
+  {
+    "nama": "Lavender",
+    "nama_latin": "Lavandula",
+    "imageid": "lavender"
+  }
+]
