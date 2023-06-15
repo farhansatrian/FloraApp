@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FloraApp</string>
+    <string name="copyright">Copyright © 2023 FloraApp</string>
+    <string name="about_us">About Us</string>
+    <string name="penjelasanAbout">Aplikasi Flora adalah sebuah aplikasi yang bertujuan untuk menampilkan informasi tumbuhan, termasuk nama tumbuhan, nama Latin tumbuhan, dan gambar tumbuhan.</string>
+    <string name="telkom">Telkom University</string>
+    <string name="no">085524580048</string>
+    <string name="deskripsi">Temukan aneka ragam tumbuhan favoritmu disini</string>
+    <string name="judulapp">Jelajahi Keindahan Flora dengan FloraApp</string>
+    <string name="listTumbuhan">List Tumbuhan</string>
+    <string name="notif_title">Ada Tumbuhan baru!</string>
+    <string name="notif_text">Tumbuhan baru sudah ditambahkan… Ayo cek!</string>
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data tumbuhan otomatis</string>
+    <string name="koneksi_error">Koneksi error</string>
+    <string name="message">%1$s diklik!</string>
+</resources>
